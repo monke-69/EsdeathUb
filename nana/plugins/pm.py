@@ -52,7 +52,7 @@ async def pm_block(client, message):
                         sticker='CAACAgUAAxkBAAEC3JBgGCUorQxL41RGQwqD2p_YxDlneQACagADNFwoOsGQufTU4CkqHgQ',
                     )
                     await message.reply(
-                        'Welp , are ya dumb. am blocking you !',
+                        'Welp , are ya dumb am blocking you.',
                     )
                     await client.block_user(message.chat.id)
                     return
