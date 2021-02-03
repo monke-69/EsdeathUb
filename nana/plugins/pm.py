@@ -26,13 +26,14 @@ if DB_AVAILABLE:
     )
 
 welc_txt = f"""
-Hello, I'm {OwnerName}'s userbot.
-Try contacting me by using the buttons down below.
+Hello, I'm {OwnerName}'s general.
+If you want to contact me , go for **contact Me** rather than spamming 
+here.If you dont want to get blocked OwO , please dont use hello/hi .
 """
 
 
 NOTIFY_ID = Owner
-BLACKLIST = ['hack', 'fuck', 'bitch', 'pubg', 'sex', 'bitcoin']
+BLACKLIST = ['hack', 'fuck', 'bitch', 'pubg', 'sex', 'bitcoin','hello','hi','how are you' ]
 
 
 @app.on_message(~filters.me & filters.private & ~filters.bot)
@@ -48,10 +49,10 @@ async def pm_block(client, message):
                 if x in BLACKLIST:
                     await client.send_sticker(
                         message.chat.id,
-                        sticker='CAADAgAD1QQAAp7kTAry1JrL3zVXSxYE',
+                        sticker='CAACAgUAAxkBAAEC3JBgGCUorQxL41RGQwqD2p_YxDlneQACagADNFwoOsGQufTU4CkqHgQ',
                     )
                     await message.reply(
-                        'Naah im blocking you!',
+                        'Welp , are ya dumb. am blocking you' !',
                     )
                     await client.block_user(message.chat.id)
                     return
@@ -129,7 +130,7 @@ async def pm_button(client, query):
         return
     if re.match('engine_pm_block', query.data):
         await app.send_sticker(
-            query.from_user.id, sticker='CAADAgAD1QQAAp7kTAry1JrL3zVXSxYE',
+            query.from_user.id, sticker='CAACAgUAAxkBAAEC3JBgGCUorQxL41RGQwqD2p_YxDlneQACagADNFwoOsGQufTU4CkqHgQ',
         )
         await setbot.edit_inline_text(
             query.from_user.id,
@@ -140,7 +141,7 @@ async def pm_button(client, query):
         await setbot.edit_inline_text(query.inline_message_id, '👍')
         await app.send_message(
             query.from_user.id,
-            'Hello, please wait for a reply from my master, thank you.',
+            'UwU my sempai will contact you soon.',
         )
         buttons = InlineKeyboard(row_width=2)
         buttons.add(
@@ -180,7 +181,7 @@ async def pm_button(client, query):
         target = query.data.split('-')[1]
         await query.message.edit_text(f'[Approved to PM]({target})')
         await app.send_message(
-            target, 'Hello, this is **Nana**, my master approved you to PM.',
+            target, 'UwU sempai approved yu , Wut"s Up? ',
         )
         set_whitelist(int(target), True)
     elif re.match(r'engine_pm_blk', query.data):
