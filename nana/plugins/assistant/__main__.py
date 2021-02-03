@@ -30,20 +30,24 @@ async def un_auth(_, message):
         return
 
     msg = f"""
-Hi {message.chat.first_name},
-You must be looking forward on how I work.
-In that case I can give you helpful links to self host me on your own.
-Here are some links for you
+    
+    'https://telegra.ph/file/99d43d8660d1a55dd168d.jpg'
+    
+OwO hewwo {message.chat.first_name},
+I am the  imperial general  and my purpose is to serve my senpai . periodt 
+
+
+
         """
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
         InlineKeyboardButton(
-            'Documentation', url='https://aman-a.gitbook.io/nana-remix/',
+            'Check Out My void', url='https://t.me/sifuwuVoids',
         ),
         InlineKeyboardButton(
-            'Repository', url='https://github.com/pokurt/Nana-Remix',
+            'MyGitHub', url='https://github.com/intellectualmonke,
         ),
-        InlineKeyboardButton('Support', url='https://t.me/nanabotsupport'),
+        InlineKeyboardButton('senpai', url='https://t.me/asifuwu'),
     )
     await message.reply(msg, reply_markup=buttons)
 
