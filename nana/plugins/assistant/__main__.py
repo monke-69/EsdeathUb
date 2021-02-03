@@ -30,22 +30,20 @@ async def un_auth(_, message):
         return
 
     msg = f"""
-    
-    https://telegra.ph/file/99d43d8660d1a55dd168d.jpg
+ 
     
 OwO hewwo {message.chat.first_name},
 I am the  imperial general  and my purpose is to serve my senpai . periodt 
-
-
-
-        """
+  
+         """
+    
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
         InlineKeyboardButton(
             'Check Out My void', url='https://t.me/sifuwuVoids',
         ),
         InlineKeyboardButton(
-            'MyGitHub', url='https://github.com/intellectualmonke,
+            'MyGitHub', url='https://github.com/intellectualmonke',
         ),
         InlineKeyboardButton('senpai', url='https://t.me/asifuwu'),
     )
