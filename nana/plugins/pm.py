@@ -33,7 +33,7 @@ here.If you dont want to get blocked OwO , please dont use hello/hi .
 
 
 NOTIFY_ID = Owner
-BLACKLIST = ['hack', 'fuck', 'bitch', 'pubg', 'sex', 'bitcoin','hello','hi','how are you' ]
+BLACKLIST = ['hack', 'fuck', 'bitch', 'pubg', 'sex', 'bitcoin', 'hello', 'hi', 'how are you' ]
 
 
 @app.on_message(~filters.me & filters.private & ~filters.bot)
@@ -52,7 +52,7 @@ async def pm_block(client, message):
                         sticker='CAACAgUAAxkBAAEC3JBgGCUorQxL41RGQwqD2p_YxDlneQACagADNFwoOsGQufTU4CkqHgQ',
                     )
                     await message.reply(
-                        'Welp , are ya dumb. am blocking you' !',
+                        'Welp , are ya dumb. am blocking you !',
                     )
                     await client.block_user(message.chat.id)
                     return
@@ -181,7 +181,7 @@ async def pm_button(client, query):
         target = query.data.split('-')[1]
         await query.message.edit_text(f'[Approved to PM]({target})')
         await app.send_message(
-            target, 'UwU sempai approved yu , Wut"s Up? ',
+            target, 'UwU sempai approved yu , Wuts Up? ',
         )
         set_whitelist(int(target), True)
     elif re.match(r'engine_pm_blk', query.data):
